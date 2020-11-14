@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <button id="button">Click</button>  
+</body>
+ <script>
+     var button=document.getElementById("button");
+     var a1=0;
+     var a2=1;
+     var a3;
+     var text="";
+     var sum=0;
+      var check_fibonaccy=function(){
+     text+=a1+"<br>"+a2+"<br>"
+     for(var i = 1 ; i <=18 ; i++){
+            a3=a1+a2;
+            sum+=a3;
+            a1=a2;
+            a2=a3;   
+     } 
+    
+     document.write("Tong cua 20 so Fibonanccy dau tien la :"+sum);
+    }
+    button.addEventListener("click",check_fibonaccy)  
+ </script>
+
+</html>

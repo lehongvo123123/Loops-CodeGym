@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var isDegree=parseInt(prompt("Fill in current temperature"));
+    ///tempareture >100
+    for( var i = 1 ; i<10000 ;i++){
+        if(isDegree > 100){
+            alert("Please reduce current temperature,Now!!!")
+            isDegree=parseInt(prompt("Fill in current temperature"));
+        }
+    }
+    ///tempareture <20
+    for( var i = 1 ; i<10000 ;i++){
+        if(isDegree < 20){
+            alert("Please imcrease current temperature,Now!!!")
+            isDegree=parseInt(prompt("Fill in current temperature"));
+        }
+    }
+    ///tempareture >=20 && ///tempareture <=100
+    for( var i = 1 ; i<2 ;i++){
+        if( isDegree >= 20 && isDegree <= 100){
+            alert("Current temperature is Ok ")
+            
+        }
+    }
+
+</script>
+</html>

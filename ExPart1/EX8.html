@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+          width: 300px;
+          height:50px;
+          background: pink;
+          font-size:40px;
+          border-radius:30px ;
+          position: relative;
+          top:200px;
+          left:450px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="button" value="Start">
+</body>
+<script>
+      var button=document.getElementById("button");
+      
+      var click_to_start=function(){
+       //game-----
+    for( var i=0 ; i<100 ;i++){
+    alert("Hãy chọn level là bạn muốn chơi (click ok to continue");
+    alert("level 1 : Có thế chọn giá trị ngấu nhiên từ 0 tới 3");
+    alert("level 2 : Có thế chọn giá trị ngấu nhiên từ 0 tới 6");
+    alert("level 3 : Có thế chọn giá trị ngấu nhiên từ 0 tới 10");
+    var choce=confirm("you got it ?");
+       if(choce===true){
+        break
+         }
+        }
+    //---------------------------------------------------------
+    for( var i=0 ; i<100 ;i++){   
+    var space1=parseInt(prompt("Hãy chọn level mà bạn muốn chơi"))
+    if(space1===1){
+        alert("Chào mừng bạn đến với level 1");
+        var xRandom=Math.floor(Math.random()*10/3)
+        var numberRandom1=parseInt(prompt("hãy nhập 1 số từ 0 tới 3 mà bạn nghĩ nó đúng"))
+           for(var i=0 ; i<100 ;i++){
+            if(numberRandom1===xRandom){
+                 alert("You win")
+                 break;
+            }else{
+                numberRandom1=parseInt(prompt("bạn đã đoán sai hãy thử lại"))
+            }
+           }
+           break;
+        
+    } else{
+        if(space1===2){
+        alert("Chào mừng bạn đến với level 2");
+        var x2Random=Math.floor(Math.random()*10/7)
+        var numberRandom2=parseInt(prompt("hãy nhập 1 số từ 0 tới 6 mà bạn nghĩ nó đúng"))
+           for(var i=0 ; i<100 ;i++){
+            if(numberRandom2===x2Random){
+                 alert("You win")
+                 break;
+            }else{
+                numberRandom2=parseInt(prompt("bạn đã đoán sai hãy thử lại"))
+            }
+           }
+           break;
+    
+    }else{
+        if(space1===3){
+        alert("Chào mừng bạn đến với level 3");
+        var x3Random=Math.floor(Math.random()*10)
+        var numberRandom3=parseInt(prompt("hãy nhập 1 số từ 0 tới 10 mà bạn nghĩ nó đúng"))
+           for(var i=0 ; i<100 ;i++){
+            if(numberRandom3===x3Random){
+                 alert("You win")
+                 break;
+            }else{
+                numberRandom3=parseInt(prompt("bạn đã đoán sai hãy thử lại"))
+            }
+           }
+           break;
+        }else{
+            space1=parseInt(prompt("Hãy nhập đúng giá trị của level mà bạn chọn")) 
+        }
+       } 
+     }
+    }
+  //--------
+}  
+      button.addEventListener("click",click_to_start)
+
+  //-------------    
+
+</script>    
+</html>
