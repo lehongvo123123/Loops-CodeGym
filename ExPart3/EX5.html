@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+</body>
+<script>
+       var a1=0;
+        var a2=1;
+        var a3;
+        var text="";
+        var count=0;
+        var n=parseInt(prompt("fill in number"))
+    for (var i=0; i<10000;i++){
+        a3=a1+a2;
+        document.write(a3+"<br>");
+          count+=1;
+          if(count===n){
+              break;
+          }
+        a1=a2;
+        a2=a3;
+    }
+</script>
+</html>

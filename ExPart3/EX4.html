@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">Clich hear</button>
+    <h1 id="show">show</h1>
+</body>
+<script>
+var check_snt=function(number){
+   var test1=true;
+       if(number<2){
+          test1=false;
+       }
+       if(number===2){
+          test1=true
+       }
+       for (var i=2 ;i<number-1;i++){
+           if(number % i ===0){
+                 test1=false;
+                 break;
+           }else{
+               test1=true;
+           }
+       }
+               return test1
+   }   
+   //-------------------------------
+   var button=document.getElementById("button");
+   var show=document.getElementById("show")
+   var text="";
+   var count=0;
+   var n=parseInt(prompt("fill in numner"))
+   var onClick=function(){
+       for ( i=1 ;i<=100000;i++){
+             if(check_snt(i)){
+                 text+=i+"<br>"
+                 count+=1;
+                 if(count===n){
+                     break;
+                 }
+             }
+
+       }
+       show.innerHTML=text;
+   }
+   button.addEventListener("click",onClick)
+</script>
+</html>

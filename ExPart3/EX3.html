@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <button id="button">Click hear</button>
+    <h1 id="show1">show</h1>
+</body>
+<script>
+    var text=1;
+    var button=document.getElementById("button");
+    var show1=document.getElementById("show1");
+   
+    //function calculator ! ---------
+    var calculator=function(number){
+         for ( var i=1 ;i<=number;i++){
+               text*=i;
+          }
+    }
+    //call function---------------------
+    //function 2 ------------------------
+    var input_number=parseFloat(prompt("fill in numer"));
+    
+    var onClick=function(){
+        var test1=input_number-input_number**3/(calculator(3))+input_number**5/(calculator(5));
+        show1.textContent=test1;12
+    }
+    button.addEventListener("click",onClick)
+       
+</script>
+</html>
