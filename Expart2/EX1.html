@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a1=0;
+    var a2=1;
+    var a3=0;
+    var text="";
+    var count=parseInt(prompt("How many number you want to print"))
+    text=a1+"<br>"+a2+"<br>";
+     for( var i=3 ; i<100 ; i++){
+          a3=a1+a2;
+          text+=a3+"<br>";
+          if(count===i){
+              break;
+          }
+          a1=a2;
+          a2=a3;
+        }
+        document.write(text);  
+     
+</script>     
+</html>

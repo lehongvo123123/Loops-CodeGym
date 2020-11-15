@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var number=parseInt(prompt("Fill the number"));
+    if(number<0){
+        alert("wrong number");
+        number=parseInt(prompt("Fill the number"));
+    }
+    if(number==0){
+        factorial=0;
+    }
+    var factorial=1;
+    for (var i=1 ;i<=number;i++){
+        factorial*=i;
+        
+    }
+    alert(factorial)
+    
+</script>
+</html>

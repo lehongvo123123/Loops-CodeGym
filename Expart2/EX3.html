@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+
+var aline="<h1>";
+ aline+="Image"+"</h1>"
+//----------------image1-----------------------
+    for(var i = 0 ; i <= 8 ; i++){
+        for (var j = 0 ; j<=i ;j++){
+            document.write("*")
+        }
+         document.write("<br>")
+     }
+ //-------------------------------------------   
+     document.write(aline);
+//-----------------image 2--------------------
+
+     for(var i = 8 ; i >= 0 ; i--){
+        for (var j = 0 ; j<=i ;j++){
+            document.write("*")
+        }
+         document.write("<br>")
+     }
+ //-----------------------------------------------  
+ document.write(aline);
+ //-----------------image 3------------------------ 
+     for (var i = 0 ; i <= 8 ;i++){
+         for (var j = 0 ; j <=i ;j++){
+              document.write("*");
+         }
+         document.write("<br>")
+     }   
+     for (var i = 8 ; i > 0 ;i--){
+         for (var j = 0 ; j <=i ;j++){
+              document.write("*");
+         }
+         document.write("<br>")
+     }
+</script>
+</html>

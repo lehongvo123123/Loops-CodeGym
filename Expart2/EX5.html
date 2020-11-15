@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://cdn.pixabay.com/photo/2020/04/16/02/44/dandelion-5048825__340.jpg");
+        }
+        div{
+            width: 408px;
+            border:12px solid rgb(228, 71, 71);
+            border-radius: 20px;
+            background:rgb(224, 180, 180);
+            position: relative;
+            left:450px;
+        }
+        #title{
+            width:260px;
+            background:yellow;
+            color: rgb(83, 3, 3);
+            position: relative;
+            left:70px;
+        }
+        #isMoney{
+            width: 400px;
+            height:50px;
+            font-size:45px;
+            border:3px solid rgb(81, 71, 228);
+        }
+        #isInterest{
+            width: 400px;
+            height:50px;
+            font-size:45px;
+            border:3px solid rgb(81, 71, 228);
+        }
+        #isMonth{
+            width: 400px;
+            height:50px;
+            font-size:45px;
+            border:3px solid rgb(81, 71, 228);
+        }
+        #isResutl{
+            position: relative;
+            left:140px
+            
+        }
+        #button{
+            position: relative;
+            left:150px;
+            width:100px;
+            height: 50px;
+            font-size: 40px;
+            top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+   <h1 id="title" >Calculator interest</h1>
+    <h1 id="title_name">Fill money  </h1>
+    <input type="number" id="isMoney" placeholder="Fill in money"> <br>
+    <h1 id="title_name">Fill in interest </h1>
+    <input type="number" id="isInterest" placeholder="Fill in interest (0.0)"> <br>
+    <h1 id="title_name">fill in month</h1>
+    <input type="numner" id="isMonth" placeholder="fill in month">   <br>
+    <button id="button">Click</button>
+    <h1 id="isResutl">Resutl</h1> <br>
+</div>
+</body>
+     <script>
+         var button=document.getElementById("button");
+         var isResutl=document.getElementById("isResutl");
+         var onClick=function(){
+         var isMoney=parseFloat(document.getElementById("isMoney").value);
+         var isInterest=parseFloat(document.getElementById("isInterest").value);
+         var isMonth=parseFloat(document.getElementById("isMonth").value);
+         var total=0;
+                for(var i = 1 ; i<=isMonth ;i++){
+                   total=isMoney+isMoney*isInterest/100;
+                   isResutl.textContent=total;
+                   isMoney=total;
+                   isResutl.textContent=Math.round(total)+" VNĐ";
+                }
+         }
+         button.addEventListener("click",onClick)
+     </script>
+</html>
