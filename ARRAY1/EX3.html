@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var number = parseFloat(prompt("fill in number"))
+    var test=true;
+    var position="";
+    var my_array=[0,1,4,3,2,5,6,9,8];
+             for (var i=0 ; i < my_array.length ; i++){
+                  if(number === my_array[i]){
+                      text=true;
+                      position=i+1;
+                      break;
+                  }else{
+                      text=false;
+                  }
+             }
+             if( text === true){
+                 alert(number+" in the array and have position " +position)
+             }else{
+                alert(number+" not in the array")
+             }
+</script>
+</html>
