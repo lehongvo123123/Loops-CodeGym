@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="numberString">
+        <button id="ClickButton">Click</button>
+        <button id="display">display</button>
+        <h3 id="result"></h3>
+</body>
+<script>
+  
+    var ClickButton=document.getElementById("ClickButton");
+    var x=0;
+    var array=[];
+    //---- at file to array -------------------------------
+    var onClick=function(){
+         array[x]=numberString=document.getElementById("numberString").value;
+         alert("Element " + array[x] + " add an srting " +x);
+         x++;
+    }
+    ClickButton.addEventListener("click",onClick)
+    //---- print function ---------------------------
+    var display=document.getElementById("display");
+    var writeResult=document.getElementById("result");
+    var writeClick=function(){
+    var text="";
+        for ( var i = 0 ; i < array.length ;i++){
+                text+="element "+i+" = " +array[i] +"<br>"
+        }
+        writeResult.innerHTML=text;
+    }
+    display.addEventListener("click",writeClick);
+    
+</script>
+</html>

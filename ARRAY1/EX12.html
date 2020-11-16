@@ -1,39 +1,36 @@
-
-<html>
-    <head>
-        <title>Faking Textarea on Typing</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <script>
-            var a=new Array(),n="";
-            a[1]='T';a[2]='Ô';a[3]='I';a[4]=' ';a[5]='L';a[6]='À';a[7]=' ';a[8]='M';a[9]='Ộ';a[10]='T';a[11]=' ';a[12]='Đ';a[13]='Ứ';a[14]='A';a[15]=' ';a[16]='N';a[17]='G';a[18]='Ố';a[19]='C';a[20]='!';a[21]='!';a[22]='!';
-            function typeTextarea(){
-                t = document.f.txt.value;
-                j = t.length;
-                if(j > 0)
-                {
-                    for(var i=1; i<=j; i++)
-                    {
-                        n = n + a[i];
-                        if(i == 22)
-                        {
-                            document.f.txt.value = "";
-                            n = "";
-                        }
-                    }
-                }
-                document.f.txt.value = n;
-                n="";
-                setTimeout("typeTextarea()", 1);
-                //return false;
-            }
-        </script>
-    </head>
-    <body>
-        <center>
-            <h2>Type anthing slowly</h2>
-            <form name="f">
-                <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
-            </form>
-        </center>
-    </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>Type anthing slowly</h2>
+        <form name="f">
+            <textarea name="txt" cols="40" rows="10" id="area";></textarea>
+        </form>
+    </center>
+<input type="text" id="name2">
+<h1 id="name1"></h1>
+</body>
+<script>
+    var area=document.f.txt.value;
+    var my_array=["I","a","m"," ","S","u","p","e","r","m","e","n"];
+    var name2 = document.getElementById("name2")
+    var name1 = document.getElementById("name1")
+    var i = 0;
+    var count=0
+    var onClick=function(){
+           if(i===my_array.length){
+               i=0;
+           }
+         area.textContent+=my_array[i];
+         i++;
+         
+    }
+    area.addEventListener("keydown",onClick)
+  
+</script>
+</html 

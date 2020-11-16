@@ -6,8 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="number" placeholder="Fill in number you want print">
-    <button id="button">Click hear</button>
+    <h1>Kiem tra so nguyen to</h1>
+    <input type="text" id="number" placeholder="Fill in number you want print"/>
+    <button id="button" onclick="onClick1()">Click hear</button>
     <h1 id="show">show</h1>
 </body>
 <script>
@@ -43,7 +44,7 @@
                         if( onClick(i)){
                            text+=i+"<br>"
                            count+=1;
-                           if(count===number1){
+                           if(count===number1-2){
                                 break;
                            }
                         }   
