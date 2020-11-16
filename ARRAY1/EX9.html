@@ -1,35 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset=utf-8 />
-    <title>JS Bin</title>
-    <style>
-        body {padding-top:50px}
-     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <input type="text" id="txtValue"/>
-    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
-    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
-    <div id="result"></div>
+    <input type="text" placeholder="fill somethink word!!!!!" id="text">
 </body>
 <script>
-      let x = 0;
-      let array = Array();
-      function add_element_to_array() {
-    array[x] = document.getElementById("txtValue").value;
-    alert("Element: " + array[x] + " Added at index " + x);
-    x++;
-    document.getElementById("txtValue ").value = "";
-}
-function display_array() {
-    let e = "<hr/>";
-    for (let i = 0; i < array.length; i++) {
-        e += "Element " + i + " = " + array[i] + "<br/>";
+    var my_array=["I","a","m"," ","S","u","p","e","r","m","e","n"];
+    var text=document.getElementById("text")
+    var auto_change_word=function(){
+      
+           
     }
-    document.getElementById("result").innerHTML = e;
-}
+
 </script>
 </html>
