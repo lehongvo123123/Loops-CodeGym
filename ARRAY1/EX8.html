@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #result{
+            border:1px solid red;
+            width:175px;
+            font-size: 20px;
+    
+        }
+    </style>
 </head>
 <body>
-    
+    ex:xin chào , chạy , câu hỏi, máy tính <br>
+    <input type="text" placeholder="Vietnam" id="translate">
+    <button id="button">Click</button>
+    <h1 id="result">English</h1>
 </body>
 <script>
-     var myColor = ["Red", "Green", "White", "Black"];
-     var change=myColor.join("");
-     document.write(change)
+    var button=document.getElementById("button");
+    var result=document.getElementById("result");
+    var array_language_vietnam=["xin chào","đi","chạy","câu hỏi","máy tính"];
+    var array_language_english=["Hello","Go","Run","Question","computer"];
+    
+    var Click_to_translate=function(){
+           var translate=document.getElementById("translate").value;
+
+            for( var i = 0 ; i< array_language_vietnam.length ;i++ ){
+                if( array_language_vietnam[i] == translate){
+             result.textContent=array_language_english[i];
+                    
+                }         
+             }
+            }
+    button.addEventListener("click",Click_to_translate)
+     
 </script>
 </html>
