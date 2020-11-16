@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    MyArray :[1,2,3,4,5,6,7,8,9] <br>
+    <button id="Click">Click hear</button>
+</body>
+    <script>
+        var my=[1,2,3,4,5,6,7,8,9];
+        var test=true;
+        var button=document.getElementById("Click")
+        var onClick=function(){
+        var number =parseInt(prompt("fill in number"))
+        for ( var i = 0  ; i < my.length ;i++){
+                if( number === my[i] ){
+                    for ( var j = 0 ; j< my.length ;j++){
+                        var change=my[i];
+                        my[i]=my[i-1];
+                        my[i-1]=change;
+                        i--;
+                        if(i === 0){
+                            break;
+                        }
+                    }
+                    my.shift(); 
+                    document.write(my)
+                    test=true;
+                    break;
+                }else{
+                    test=false;
+                }    
+        }
+        if( test==false){
+                    alert( number+ " not in the array")
+                }else{
+                    alert( number+ " in the array")
+                }
+        }   
+        button.addEventListener("click",onClick)
+    </script>
+</html> 

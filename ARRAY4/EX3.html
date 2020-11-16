@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h3>Caro Game Simple</h3>
+    <button id="button">click</button>
+    <p id="carogame"></p>
+    
+</body>
+<script>
+     var ivar=parseInt(prompt("fill in number"));
+     var jvar=parseInt(prompt("fill in number"));
+     var carogame=document.getElementById("carogame")
+    let b = document.getElementById("carogame");
+    
+    let board = [];
+    let data = "";
+    for (let i = 0; i < ivar; i++) {
+        board[i] = new Array(0, 0, 0, 0, 0);
+        for (var j =0 ; j< ivar ;j++){
+        board[i].push("0");
+        data += board[i][j] + "&nbsp;&nbsp;";
+        data += "<br/>";
+        }
+    }
+    b.innerHTML = data;
+    var button=document.getElementById("button")
+    var onClick=function(){
+    let positionX = prompt("X: ");
+    let positionY = prompt("Y: ");
+    data = "";
+    board[positionX][positionY] = "x";
+    for (let i = 0; i < ivar; i++) {
+        data += "<br/>";
+       alert(data);
+        for (let j = 0; j < jvar; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+
+
+    b.innerHTML = "<hr/>" + data;
+}
+   button.addEventListener("click",onClick)
+
+    
+    </script>
+
+</html>
