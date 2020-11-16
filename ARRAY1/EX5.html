@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var my_Array=[ 'c', 's', 'c', '2', '6', '1' ]
+    var first=0;
+    var last=my_Array.length-1;
+             for(var i=0 ; i< my_Array.length ;i++){
+                     if(first<last){
+                         var change=my_Array[first];
+                             my_Array[first]=my_Array[last];
+                             my_Array[last]=change
+                             first++;
+                             last--;
+                     }
+             }
+             document.write(my_Array.join(""));
+</script>
+</html>

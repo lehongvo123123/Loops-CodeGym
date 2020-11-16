@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" placeholder="Fill in number you want print">
+    <button id="button">Click hear</button>
+    <h1 id="show">show</h1>
+</body>
+<script>
+       var button =document.getElementById("button");
+       var show=document.getElementById("show");
+       var test=true;
+       var onClick=function(number){
+                if(number <2){
+                    test=false;
+                }
+                if(number ==2){
+                     test=true;
+                }  
+
+                for ( var i = 2 ;i < number-1 ; i++){
+                if(number % i === 0 ){
+                            test=false;
+                            break;
+                        }else{
+                            test=true;
+                        }
+            }
+            return test;
+                
+       }
+     //---------print snt-------------------------
+     var onClick1=function(){
+         var text="";
+         var count=0;
+         var number1 = parseFloat(document.getElementById("number").value); 
+        
+                 for( var i = 0  ;i<=10000 ; i++){
+                        if( onClick(i)){
+                           text+=i+"<br>"
+                           count+=1;
+                           if(count===number1){
+                                break;
+                           }
+                        }   
+                 } 
+                 show.innerHTML=text;
+     }
+       
+       button.addEventListener("click",onClick1)
+</script>
+</html>
