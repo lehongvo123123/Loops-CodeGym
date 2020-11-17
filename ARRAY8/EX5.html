@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+     var inpur_string1=prompt("fill in string 1: ");
+     var inpur_string2=prompt("fill in string 2: ")
+     var test=true;
+         if( inpur_string1.length !== inpur_string2.length){
+             alert("diffirent")
+         }else{
+             for ( var i = 0  ; i < inpur_string2.length ; i++){ 
+                  if(inpur_string1[i]===inpur_string2[i]){
+                       test = true ;        
+                    }
+                    else{
+                          test = false;
+                          break;
+                      }
+                 }
+              }
+              if( test === true){
+                   alert("same")
+              }else{
+                alert("diffirent")
+              }
+</script>123
+</html>

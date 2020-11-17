@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    My Array: <br>  
+</body>
+<script> 
+        var capital_word=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+        var normal_word=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+        var  my_array=["C","c",2,5,"A","a","v",4,6,"a"];
+        document.write(my_array+"<br>");
+        var count=0;
+         for ( var i = 0 ;i <= my_array.length ;i++ ){
+            if(capital_word.indexOf(my_array[i]) !== -1){
+                   count+=1;
+            }
+            if(normal_word.indexOf(my_array[i]) !== -1){
+                   count+=1;
+            }
+
+         }
+         document.write("Have "+count+" character in my array")
+         
+</script>
+</html>
