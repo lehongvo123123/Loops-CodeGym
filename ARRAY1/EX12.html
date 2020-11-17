@@ -6,31 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h2>Type anthing slowly</h2>
-        <form name="f">
-            <textarea name="txt" cols="40" rows="10" id="area";></textarea>
+    <form name="f">
+        <textarea name="txt" cols="40" rows="10" id="name2"></textarea>
         </form>
-    </center>
-<input type="text" id="name2">
-<h1 id="name1"></h1>
 </body>
 <script>
-    var area=document.f.txt.value;
-    var my_array=["I","a","m"," ","S","u","p","e","r","m","e","n"];
-    var name2 = document.getElementById("name2")
-    var name1 = document.getElementById("name1")
-    var i = 0;
-    var count=0
+
+    var a=["I","a","m","-","S","u","p","e","r","-","m","e","n"];
+    var name2=document.getElementById("name2");
+    var n="";
     var onClick=function(){
-           if(i===my_array.length){
-               i=0;
-           }
-         area.textContent+=my_array[i];
-         i++;
+         var t = document.f.txt.value;
+             var   j = t.length;
+                if(j >0)
+                {
+                    for(var i=0; i<=j; i++)
+                    {
+                        n+=a[i];
+                        if(i >12)
+                        {
+                            document.f.txt.value = "";
+                            n = "";
+                        }
+                    }
+                }
+                document.f.txt.value = n;
+                n="";
          
     }
-    area.addEventListener("keydown",onClick)
+    name2.addEventListener("keydown",onClick)
   
 </script>
 </html 
